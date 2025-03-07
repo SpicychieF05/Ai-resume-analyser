@@ -350,7 +350,7 @@ if uploaded_file and job_description:
         "Showcase your teamwork abilities.": "https://www.youtube.com/watch?v=wXWqYf4c97E",
 
         # Problem-Solving
-        "Detail your problem-solving skills.": "https://www.youtube.com/watch?v=q6z3z45u-qQ",
+        "Detail your problem-solving skills.": "https://youtu.be/hiqoCvPs_Jc?si=trgnc3ek8mQQVLZU",
 
         # Awards
         "Mention any awards or recognitions received.": "https://www.youtube.com/watch?v=sO58z-V8V5Q",
