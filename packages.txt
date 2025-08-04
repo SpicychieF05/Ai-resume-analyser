@@ -1,0 +1,8 @@
+# System packages for Streamlit Cloud deployment
+# Add any system-level dependencies here
+# Currently no system packages required for this application
+
+# Example system packages:
+# ffmpeg
+# libsm6
+# libxext6
