@@ -77,20 +77,24 @@ The application will open in your default browser at `http://localhost:8501`
 
 ## 📦 Dependencies
 
-| Package | Version | Purpose | Streamlit Optimized |
-|---------|---------|---------|-------------------|
-| streamlit | 1.39.0 | Web application framework | ✅ Latest stable |
-| PyPDF2 | 3.0.1 | PDF text extraction | ✅ Compatible |
-| scikit-learn | 1.3.2 | Machine learning algorithms | ✅ Optimized |
-| pandas | 2.1.4 | Data manipulation | ✅ Required |
-| numpy | 1.24.4 | Numerical computing | ✅ Core dependency |
+| Package | Version | Purpose | Streamlit Cloud Status |
+|---------|---------|---------|----------------------|
+| streamlit | Latest | Web application framework | ✅ Auto-resolved |
+| PyPDF2 | Latest | PDF text extraction | ✅ Compatible |
+| scikit-learn | Latest | Machine learning algorithms | ✅ Auto-resolved |
+| pandas | Latest | Data manipulation | ✅ Compatible |
+| numpy | Latest | Numerical computing | ✅ Auto-resolved |
 
 **Streamlit Cloud Benefits:**
 - ✅ **Auto-deployment** on git push
 - ✅ **Free hosting** for public repos
+- ✅ **Dependency resolution** - Latest compatible versions
+- ✅ **Python 3.11** environment (optimal compatibility)
 - ✅ **Custom domains** supported
 - ✅ **Automatic SSL** certificates
 - ✅ **Built-in monitoring** and logs
+
+**Note:** Dependencies use flexible versioning to ensure compatibility with Streamlit Cloud's Python environment.
 
 ## 🏗️ Project Structure
 
@@ -367,9 +371,55 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 
 ## 🐛 Known Issues
 
-- Large PDF files (>10MB) may take longer to process
+- Large PDF files (>20MB) may take longer to process
 - Complex PDF layouts might affect text extraction accuracy
 - Video recommendations are currently limited to English content
+
+## 🔧 Troubleshooting
+
+### Streamlit Cloud Deployment Issues
+
+**Issue: Dependency conflicts or build errors**
+```bash
+# Solution: The app uses flexible versioning to auto-resolve dependencies
+# Streamlit Cloud will automatically select compatible versions
+```
+
+**Issue: Python version compatibility**
+```bash
+# The app specifies Python 3.11 in .python-version for optimal compatibility
+# Streamlit Cloud supports Python 3.9, 3.10, 3.11, and 3.12
+```
+
+**Issue: Package installation timeouts**
+```bash
+# Large packages like scikit-learn may take time to install
+# This is normal and the deployment will complete automatically
+```
+
+### Local Development Issues
+
+**Issue: Module not found errors**
+```bash
+# Make sure you're in the virtual environment
+pip install -r requirements.txt
+
+# Or reinstall specific packages
+pip install streamlit PyPDF2 scikit-learn pandas numpy
+```
+
+**Issue: PDF processing errors**
+```bash
+# Ensure PDF files are not corrupted or password-protected
+# Try with a different PDF file
+```
+
+### Performance Issues
+
+**Issue: Slow processing**
+- Use smaller PDF files (< 5MB recommended)
+- Ensure good internet connection for video loading
+- Clear browser cache if UI seems slow
 
 ## 📊 Performance
 

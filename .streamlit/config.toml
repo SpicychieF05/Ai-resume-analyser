@@ -8,7 +8,7 @@ textColor = "#262730"
 headless = true
 enableCORS = false
 enableXsrfProtection = false
-maxUploadSize = 10
+maxUploadSize = 20
 
 [browser]
 gatherUsageStats = false
