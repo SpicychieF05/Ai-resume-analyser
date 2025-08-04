@@ -103,7 +103,8 @@ Ai-resume-analyser/
 ├── 🚫 .gitignore               # Git ignore rules
 │
 ├── ⚙️ .streamlit/              # Streamlit configuration
-│   └── config.toml             # Theme and server settings
+│   ├── config.toml             # Theme and server settings
+│   └── secrets.toml.example    # Template for secrets management
 │
 ├── 📁 resume_dataset/          # Sample resume files
 │   ├── Ai_Engineer_Yvet_Von.pdf
