@@ -11,50 +11,53 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
-# Custom CSS for professional design with responsive optimization
+# Custom CSS for professional dark theme design with responsive optimization
 st.markdown("""
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 <style>
-    /* General Body and Font */
+    /* General Body and Font - Dark Theme */
     body {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-        background-color: #f0f4f8;
+        background-color: #0e1117 !important;
+        color: #fafafa !important;
     }
 
-    /* Main container with responsive padding */
+    /* Main container with responsive padding - Dark Theme */
     .main {
-        background-color: #f0f4f8;
+        background-color: #0e1117 !important;
         padding: 0.5rem 1rem 1rem 1rem;
+        color: #fafafa !important;
     }
 
-    /* Card styling with responsive design */
+    /* Card styling with responsive design - Dark Theme */
     .card {
-        background: #ffffff;
+        background: #262730 !important;
         border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
         padding: 1.5rem;
         margin-bottom: 1.5rem;
         transition: box-shadow 0.3s ease-in-out;
         width: 100%;
         box-sizing: border-box;
+        border: 1px solid #3d3d3d;
     }
     .card:hover {
-        box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.4);
     }
 
-    /* Responsive Header */
+    /* Responsive Header - Dark Theme */
     .title, h1.title {
         font-size: clamp(2.5rem, 6vw, 4rem);
         font-weight: 800;
-        color: #0d6efd;
+        color: #4fc3f7 !important;
         text-align: center;
         margin-top: -1rem;
         margin-bottom: 1rem;
         line-height: 1.1;
-        text-shadow: 0 2px 4px rgba(13, 110, 253, 0.1);
+        text-shadow: 0 2px 4px rgba(79, 195, 247, 0.3);
     }
     
-    /* Social Media Buttons */
+    /* Social Media Buttons - Enhanced for Dark Theme */
     .social-buttons {
         display: flex;
         justify-content: center;
@@ -74,31 +77,31 @@ st.markdown("""
         color: white;
         font-size: 1.2rem;
         transition: all 0.3s ease;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.3);
     }
     
     .social-btn:hover {
         transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+        box-shadow: 0 4px 12px rgba(79, 195, 247, 0.4);
         color: white;
         text-decoration: none;
     }
     
     .github-btn {
-        background: linear-gradient(135deg, #333, #24292e);
+        background: linear-gradient(135deg, #4fc3f7, #29b6f6);
     }
     
     .linkedin-btn {
-        background: linear-gradient(135deg, #333, #24292e);
+        background: linear-gradient(135deg, #4fc3f7, #29b6f6);
     }
     
     .twitter-btn {
-        background: linear-gradient(135deg, #333, #24292e);
+        background: linear-gradient(135deg, #4fc3f7, #29b6f6);
     }
     
     .subtitle, p.subtitle {
         font-size: clamp(1rem, 2.8vw, 1.3rem);
-        color: #5a6268;
+        color: #b0bec5 !important;
         text-align: center;
         margin-bottom: 2rem;
         line-height: 1.4;
@@ -106,7 +109,7 @@ st.markdown("""
         font-weight: 500;
     }
 
-    /* Score display with responsive sizing */
+    /* Score display with responsive sizing - Dark Theme */
     .score-display {
         text-align: center;
         padding: 1rem 0;
@@ -117,31 +120,46 @@ st.markdown("""
         max-width: 300px;
     }
 
-    /* Responsive text areas and file uploads */
+    /* Responsive text areas and file uploads - Dark Theme */
     .stTextArea textarea {
         font-size: clamp(0.8rem, 2vw, 1rem) !important;
         line-height: 1.4 !important;
+        background-color: #262730 !important;
+        color: #fafafa !important;
+        border: 1px solid #3d3d3d !important;
     }
     
     .stFileUploader {
         margin-bottom: 1rem;
     }
+    
+    .stFileUploader > div {
+        background-color: #262730 !important;
+        border: 1px solid #3d3d3d !important;
+    }
 
-    /* Video container responsive */
+    /* Video container responsive - SMALLER SIZE */
     .stVideo {
         width: 100% !important;
-        max-width: 100% !important;
+        max-width: 600px !important;
+        margin: 0 auto !important;
     }
     
     iframe {
         max-width: 100% !important;
-        height: auto !important;
-        aspect-ratio: 16/9;
+        width: 100% !important;
+        height: 300px !important; /* Fixed smaller height */
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
 
-    /* Progress bar styling */
+    /* Progress bar styling - Dark Theme */
     .stProgress {
         margin: 1rem 0;
+    }
+    
+    .stProgress > div > div > div {
+        background-color: #4fc3f7 !important;
     }
 
     /* Responsive columns for mobile */
@@ -149,12 +167,12 @@ st.markdown("""
         padding: 0 0.5rem;
     }
 
-    /* Footer with responsive design */
+    /* Footer with responsive design - Dark Theme */
     .footer {
         text-align: center;
         padding: 1.5rem 1rem;
         margin-top: 2rem;
-        color: #718096;
+        color: #b0bec5 !important;
         font-size: clamp(0.8rem, 2vw, 0.9rem);
         line-height: 1.4;
     }
@@ -165,6 +183,25 @@ st.markdown("""
     
     .footer a {
         word-break: break-word;
+        color: #4fc3f7 !important;
+    }
+
+    /* Streamlit component styling - Dark Theme */
+    .stSelectbox > div > div {
+        background-color: #262730 !important;
+        color: #fafafa !important;
+    }
+    
+    .stButton > button {
+        background-color: #4fc3f7 !important;
+        color: white !important;
+        border: none !important;
+        border-radius: 8px !important;
+    }
+    
+    .stButton > button:hover {
+        background-color: #29b6f6 !important;
+        box-shadow: 0 4px 12px rgba(79, 195, 247, 0.3) !important;
     }
 
     /* Hide Streamlit elements */
@@ -172,7 +209,7 @@ st.markdown("""
     footer {visibility: hidden;}
     header {visibility: hidden;}
 
-    /* Mobile-specific optimizations */
+    /* Mobile-specific optimizations - Dark Theme */
     @media (max-width: 768px) {
         .main {
             padding: 0.25rem 0.5rem 0.5rem 0.5rem;
@@ -223,9 +260,14 @@ st.markdown("""
         div[data-testid="column"]:first-child {
             margin-bottom: 1rem;
         }
+        
+        /* Smaller videos on mobile */
+        iframe {
+            height: 200px !important;
+        }
     }
 
-    /* Extra small screens */
+    /* Extra small screens - Dark Theme */
     @media (max-width: 480px) {
         .main {
             padding: 0.25rem;
@@ -254,9 +296,14 @@ st.markdown("""
         .subtitle, p.subtitle {
             padding: 0 0.25rem;
         }
+        
+        /* Even smaller videos on extra small screens */
+        iframe {
+            height: 180px !important;
+        }
     }
 
-    /* Large screens optimization */
+    /* Large screens optimization - Dark Theme */
     @media (min-width: 1200px) {
         .main {
             max-width: 1200px;
@@ -273,39 +320,101 @@ st.markdown("""
             padding: 2rem;
             margin-top: 3rem;
         }
+        
+        /* Optimal video size for large screens */
+        iframe {
+            height: 350px !important;
+        }
     }
 
-    /* Ensure proper spacing for metrics */
+    /* Ensure proper spacing for metrics - Dark Theme */
     div[data-testid="metric-container"] {
-        background-color: transparent !important;
-        border: none !important;
+        background-color: #262730 !important;
+        border: 1px solid #3d3d3d !important;
         padding: 1rem !important;
+        border-radius: 8px !important;
+        color: #fafafa !important;
     }
     
-    /* Responsive subheaders */
+    div[data-testid="metric-container"] label {
+        color: #b0bec5 !important;
+    }
+    
+    div[data-testid="metric-container"] [data-testid="metric-container"] div {
+        color: #4fc3f7 !important;
+    }
+    
+    /* Responsive subheaders - Dark Theme */
     .stMarkdown h2, .stMarkdown h3 {
         font-size: clamp(1.2rem, 3vw, 1.5rem) !important;
         margin-bottom: 1rem !important;
+        color: #4fc3f7 !important;
     }
     
-    /* Responsive bullet points */
+    /* Responsive bullet points - Dark Theme */
     .stMarkdown ul li {
         font-size: clamp(0.85rem, 2.2vw, 1rem) !important;
         line-height: 1.5 !important;
         margin-bottom: 0.5rem !important;
+        color: #fafafa !important;
     }
     
-    /* Info message styling */
+    /* Info message styling - Dark Theme */
     .stInfo {
         margin: 1rem 0 !important;
         padding: 1rem !important;
         border-radius: 8px !important;
+        background-color: #1a237e !important;
+        border: 1px solid #3949ab !important;
+        color: #e3f2fd !important;
     }
     
-    /* Spinner responsiveness */
+    /* Success message styling - Dark Theme */
+    .stSuccess {
+        background-color: #1b5e20 !important;
+        border: 1px solid #4caf50 !important;
+        color: #e8f5e8 !important;
+    }
+    
+    /* Warning message styling - Dark Theme */
+    .stWarning {
+        background-color: #e65100 !important;
+        border: 1px solid #ff9800 !important;
+        color: #fff3e0 !important;
+    }
+    
+    /* Error message styling - Dark Theme */
+    .stError {
+        background-color: #b71c1c !important;
+        border: 1px solid #f44336 !important;
+        color: #ffebee !important;
+    }
+    
+    /* Spinner responsiveness - Dark Theme */
     .stSpinner {
         text-align: center !important;
         margin: 2rem 0 !important;
+    }
+    
+    .stSpinner > div {
+        border-color: #4fc3f7 !important;
+    }
+    
+    /* Video recommendation section styling */
+    .video-container {
+        max-width: 600px;
+        margin: 1rem auto;
+        padding: 1rem;
+        background-color: #262730;
+        border-radius: 8px;
+        border: 1px solid #3d3d3d;
+    }
+    
+    .video-title {
+        color: #4fc3f7 !important;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        text-align: center;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -662,9 +771,21 @@ if uploaded_file and job_description:
     for point in key_points:
         if point in video_recommendations:
             if video_count < max_videos_mobile:  # Show first 3 videos to avoid overwhelming mobile users
-                st.markdown(f"**Related to:** {point}")
+                # Enhanced video container with dark theme styling
+                st.markdown(f"""
+                <div class="video-container">
+                    <div class="video-title">🎯 Related to: {point}</div>
+                </div>
+                """, unsafe_allow_html=True)
+
+                # Video with improved styling
                 st.video(video_recommendations[point])
-                st.markdown("---")
+
+                # Stylish divider
+                st.markdown("""
+                <div style="height: 1px; background: linear-gradient(90deg, transparent, #4fc3f7, transparent); margin: 1.5rem 0;"></div>
+                """, unsafe_allow_html=True)
+
                 recommended_videos_found = True
                 video_count += 1
             else:
