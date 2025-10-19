@@ -79,7 +79,7 @@ This project is licensed under the MIT License.
 - GitHub: [@SpicychieF05](https://github.com/SpicychieF05)
 - LinkedIn: [chirantan-mallick](https://linkedin.com/in/chirantan-mallick)
 - Twitter: [@chirantan_mallick](https://twitter.com/chirantan_mallick)
-- Portfolio: [linktr.ee/chirantan_mallick](https://linktr.ee/chirantan_mallick)
+- Portfolio: [linktr.ee/chirantan_mallick](https://chirantanmallick.vercel.app/)
 
 ## 🙏 Acknowledgments
 
