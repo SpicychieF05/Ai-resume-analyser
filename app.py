@@ -651,7 +651,7 @@ st.markdown("""
     <a href="https://linkedin.com/in/chirantan-mallick" target="_blank" class="social-btn linkedin-btn" title="LinkedIn">
         <i class="fab fa-linkedin-in"></i>
     </a>
-    <a href="https://twitter.com/chirantan_mallick" target="_blank" class="social-btn twitter-btn" title="Twitter/X">
+    <a href="https://x.com/Chirantan2965" target="_blank" class="social-btn twitter-btn" title="Twitter/X">
         <i class="fab fa-twitter"></i>
     </a>
 </div>
@@ -799,7 +799,7 @@ if uploaded_file and job_description:
 
 else:
     # Enhanced info message with better mobile formatting
-    st.info("📋 **Getting Started**\n\n1. **Upload your resume** (PDF format only)\n2. **Paste the job description** you want to match against\n3. **Get instant analysis** with match score and improvement suggestions\n4. **Watch recommended videos** to enhance your resume")
+    st.info("📋 **Getting Started**\n\n1. **Upload your resume** (PDF format only)\n2. **Paste the job description** you want to match against\n3. **Get instant analysis** with match score and impro[...]")
 
     # Add some helpful tips
     with st.expander("💡 Tips for better results"):
